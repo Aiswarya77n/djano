@@ -8,9 +8,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script src="https://kit.fontawesome.com/fda061cd3f.js" crossorigin="anonymous"></script>
+
 </head>
-<body background="image-17.png" style="  background-repeat: no-repeat;
-    background-size: cover">
+ <body background="image-17.png" style="  background-repeat: no-repeat;
+background-size: cover">
 
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
@@ -58,33 +59,34 @@
             <p class="text-center fw-bold mx-3 mb-0">Or</p>
           </div>
 
-          <!-- Email input -->
-          <div class="form-outline mb-4">
-            <input type="email" id="form3Example3" class="form-control form-control-lg"
-              placeholder="Enter a valid email address" />
-            <label class="form-label" for="form3Example3">Email address</label>
+          
+          <h1>Registration form</h1>
+          <div class="form-container">
+            <form name="registerForm">
+              <label for="firstName">First Name *</label>
+              <input type="text" id="firstName" onClick="finame(firstName)" ame="firstName" placeholder="John" /><p class="error-message"></p>
+              <label for="lastName">Last Name *</label>
+              <input type="text" id="lastName" placeholder="Doe" />
+              <p class="error-message"></p>
+              <label for="e-mail">E-mail address *</label>
+              <input type="text" id="e-mail" placeholder="john-doe@net.com" />
+              <p class="error-message"></p>
+              <label for="phoneNumber">Phone Number</label>
+              <input type="text" id="phoneNumber" maxlength="10" pattern="{xxx-xxx-xxxx,xxx.xxx.xxxx,xxx xxx xxxx}"   />
+              <p class="error-message"></p>
+              
+              <label for="password">Password *</label>
+              <input type="password" id="password" pattern=".{8,}"   />
+              <p class="error-message"></p>
+              <p class="password-rules">Your password should contain at least 8 characters and 1 number.</p>
+              
+                <input class="button" type="submit" value="submit" name="submit" onClick="formValidation() " />
+             </form>
           </div>
-
-          <!-- Password input -->
-          <div class="form-outline mb-3">
-            <input type="password" id="form3Example4" class="form-control form-control-lg"
-              placeholder="Enter password" />
-            <label class="form-label" for="form3Example4">Password</label>
-          </div>
-
-          <div class="form-outline mb-3">
-            <input type="password" id="form3Example4" class="form-control form-control-lg"
-              placeholder="Enter password" />
-            <label class="form-label" for="form3Example4">Confirm Password</label>
-          </div>
+        
 
 
-
-          <div class="text-center text-lg-start mt-4 pt-2">
-            <button type="button" class="btn btn-primary btn-lg"
-              style="padding-left: 2.5rem; padding-right: 2.5rem;">Register</button>
-
-          </div>
+          
 
         </form>
       </div>
@@ -93,6 +95,6 @@
 
 </section>
 </div>
-
+<script src="sinup.js"></script>
 </body>
 </html>
